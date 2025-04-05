@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Test Project"      # Project title
+  title:        "4-bit Stack Machine"      # Project title
   author:       "Your Name"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "This is a template project."      # One line description of what your project does
@@ -11,7 +11,7 @@ project:
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_stack_machine"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
@@ -20,6 +20,9 @@ project:
   # WARNING: VHDL support in Tiny Tapeout is experimental. The template may get changes during
   #          the shuttle and VHDL support may be dropped for future shuttles if we see low usage.
   source_files:
+    - "util.vhdl"
+    - "stack.vhdl"
+    - "alu.vhdl"
     - "project.vhdl"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
@@ -45,14 +48,14 @@ pinout:
   uo[7]: "uo_out[7]"
 
   # Bidirectional pins
-  uio[0]: "uio_in[0]"
-  uio[1]: "uio_in[1]"
-  uio[2]: "uio_in[2]"
-  uio[3]: "uio_in[3]"
-  uio[4]: "uio_in[4]"
-  uio[5]: "uio_in[5]"
-  uio[6]: "uio_in[6]"
-  uio[7]: "uio_in[7]"
+  uio[0]:
+  uio[1]:
+  uio[2]:
+  uio[3]:
+  uio[4]:
+  uio[5]:
+  uio[6]:
+  uio[7]:
 
 # Do not change!
 yaml_version: 6
